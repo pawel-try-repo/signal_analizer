@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.bulus.projekcik.MainActivity"
+    tools:showIn="@layout/activity_main"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp"
+    android:background="#b8b8b8">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="493dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="10dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:text="PARAMETRY SYGNAŁU"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/operator" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:text="System:"
+            android:layout_below="@+id/textView14"
+            android:layout_alignStart="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textnumer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="Numer komórki :"
+            android:layout_below="@+id/textView15"
+            android:layout_alignStart="@+id/textView15" />
+
+        <TextView
+            android:id="@+id/textsnr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="SNR [dB] :"
+            android:layout_below="@+id/textnumer"
+            android:layout_alignStart="@+id/textnumer" />
+
+        <TextView
+            android:id="@+id/textrsrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textrssi"
+            android:layout_below="@+id/textrssi"
+            android:layout_marginTop="17dp"
+            android:text="RSRP [dBm] :" />
+
+        <TextView
+            android:id="@+id/textrssi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textsnr"
+            android:layout_alignTop="@+id/textsnr"
+            android:layout_marginTop="31dp"
+            android:text="RSSI [dBm]:" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:text="LOKALIZACJA"
+            android:textStyle="bold"
+            android:layout_below="@+id/textLevel"
+            android:layout_toEndOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textrsrp"
+            android:layout_below="@+id/textView20"
+            android:layout_marginTop="22dp"
+            android:text="Szerokość :" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textView21"
+            android:layout_below="@+id/textView20"
+            android:layout_marginTop="59dp"
+            android:text="Długość :" />
+
+        <TextView
+            android:id="@+id/system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textnumer"
+            android:layout_marginStart="28dp"
+            android:layout_toEndOf="@+id/textView20"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/numerStacji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textnumer"
+            android:layout_alignBottom="@+id/textnumer"
+            android:layout_alignStart="@+id/system"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/snrValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/numerStacji"
+            android:layout_alignTop="@+id/textsnr"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/rssiValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/snrValue"
+            android:layout_alignTop="@+id/textrssi"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/rsrpValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/rssiValue"
+            android:layout_alignTop="@+id/textrsrp"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uruchom lokalizację"
+            android:layout_marginEnd="13dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/buttSave" />
+
+        <TextView
+            android:id="@+id/longitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView23"
+            android:layout_alignBottom="@+id/textView23"
+            android:layout_alignStart="@+id/latitude"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/latitude"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/rsrpValue"
+            android:layout_alignTop="@+id/textView21"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:text="Operator:"
+            android:layout_marginStart="83dp"
+            android:layout_above="@+id/system"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/operator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignStart="@+id/system"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/textLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/textrsrp"
+            android:layout_below="@+id/textrsrp"
+            android:layout_marginTop="16dp"
+            android:text="Poziom sygnału" />
+
+        <TextView
+            android:id="@+id/poziomValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textLevel"
+            android:layout_alignBottom="@+id/textLevel"
+            android:layout_alignStart="@+id/rsrpValue"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/buttSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/button"
+            android:layout_toEndOf="@+id/textView20"
+            android:text="Zapis" />
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
